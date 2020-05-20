@@ -15,38 +15,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzD-R2-Vpf">
-                                <rect key="frame" x="163" y="391" width="49" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.018125088724666227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFV-sj-HrP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4t-cg-kQ0">
-                                <rect key="frame" x="126.66666666666669" y="458" width="122" height="30"/>
-                                <state key="normal" title="Zakończ nagranie"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wciśnij by zacząć nagrywać" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lki-Dq-Fec">
-                                <rect key="frame" x="80.666666666666686" y="429" width="214" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wxw-hs-Hff">
+                                <rect key="frame" x="80.666666666666671" y="291" width="213.66666666666663" height="230.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzD-R2-Vpf">
+                                        <rect key="frame" x="42" y="0.0" width="130" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="ajo-Dk-nHx"/>
+                                            <constraint firstAttribute="width" constant="130" id="vI6-kb-Ak9"/>
+                                        </constraints>
+                                        <state key="normal" image="record"/>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFV-sj-HrP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wciśnij by zacząć nagrywać" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lki-Dq-Fec">
+                                        <rect key="frame" x="0.0" y="138" width="213.66666666666666" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4t-cg-kQ0">
+                                        <rect key="frame" x="74.999999999999986" y="166.33333333333331" width="64.000000000000014" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="59F-7c-cBh"/>
+                                            <constraint firstAttribute="width" constant="64" id="tPd-me-Kmk"/>
+                                        </constraints>
+                                        <state key="normal" image="Stop"/>
+                                        <connections>
+                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O14-4x-Yoi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Lki-Dq-Fec" firstAttribute="top" secondItem="BzD-R2-Vpf" secondAttribute="bottom" constant="8" id="1U0-Oh-6F4"/>
-                            <constraint firstItem="Lki-Dq-Fec" firstAttribute="centerX" secondItem="A4t-cg-kQ0" secondAttribute="centerX" id="DRR-5k-y1h"/>
-                            <constraint firstItem="A4t-cg-kQ0" firstAttribute="top" secondItem="Lki-Dq-Fec" secondAttribute="bottom" constant="8" id="HVJ-jX-DKc"/>
-                            <constraint firstItem="BzD-R2-Vpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="awb-TB-dFY"/>
-                            <constraint firstItem="Lki-Dq-Fec" firstAttribute="centerX" secondItem="BzD-R2-Vpf" secondAttribute="centerX" id="sNx-l3-DYD"/>
-                            <constraint firstItem="BzD-R2-Vpf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xPm-2m-V3o"/>
+                            <constraint firstItem="wxw-hs-Hff" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Msb-jB-s2l"/>
+                            <constraint firstItem="wxw-hs-Hff" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tk5-xi-LQn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="BzD-R2-Vpf" id="Sbe-jz-Te4"/>
                         <outlet property="recordingLabel" destination="Lki-Dq-Fec" id="fLr-tw-lqd"/>
+                        <outlet property="stopRecordingButton" destination="A4t-cg-kQ0" id="gTl-KW-FCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,4 +67,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Stop" width="155" height="155"/>
+        <image name="record" width="155" height="155"/>
+    </resources>
 </document>
