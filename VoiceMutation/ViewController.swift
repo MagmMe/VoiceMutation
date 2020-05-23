@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
+        stopRecordingButton.isEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,11 +33,15 @@ class ViewController: UIViewController {
         
         recordingLabel.text = "Nagrywam"
         recordingLabel.textColor = UIColor.red
+        stopRecordingButton.isEnabled = true
+        recordButton.isEnabled = false
     }
     
     @IBAction func stopRecording(_ sender: Any) {
         recordingLabel.text = "Wciśnij, by zacząć nagrywać"
         recordingLabel.textColor = UIColor.black
+        stopRecordingButton.isEnabled = false
+        recordButton.isEnabled = true
     }
 }
 
