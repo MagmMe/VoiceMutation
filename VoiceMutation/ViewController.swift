@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidApear")
     }
+    
 
     @IBAction func recordAudio(_ sender: Any) {
         
@@ -43,5 +44,7 @@ class ViewController: UIViewController {
         stopRecordingButton.isEnabled = false
         recordButton.isEnabled = true
     }
+    
+
 }
 

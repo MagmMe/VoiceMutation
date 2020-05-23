@@ -1,0 +1,9 @@
+
+/* Class = "UIBarButtonItem"; title = "Powrót"; ObjectID = "5mb-Fn-7wd"; */
+"5mb-Fn-7wd.title" = "Powrót";
+
+/* Class = "UIViewController"; title = "Main"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Main";
+
+/* Class = "UILabel"; text = "Wciśnij by zacząć nagrywać"; ObjectID = "Lki-Dq-Fec"; */
+"Lki-Dq-Fec.text" = "Wciśnij by zacząć nagrywać";
