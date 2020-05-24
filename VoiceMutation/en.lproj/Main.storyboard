@@ -10,7 +10,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Main" id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="VoiceMutation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="VoiceMutation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,7 @@
                                         <state key="normal" image="Stop"/>
                                         <connections>
                                             <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O14-4x-Yoi"/>
+                                            <segue destination="Dig-BV-t5I" kind="show" id="7YK-Bq-93a"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,7 +62,6 @@
                         <outlet property="recordButton" destination="BzD-R2-Vpf" id="Sbe-jz-Te4"/>
                         <outlet property="recordingLabel" destination="Lki-Dq-Fec" id="fLr-tw-lqd"/>
                         <outlet property="stopRecordingButton" destination="A4t-cg-kQ0" id="gTl-KW-FCZ"/>
-                        <segue destination="Dig-BV-t5I" kind="show" identifier="stopRecording" id="yGf-LW-D8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,7 +78,9 @@
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Y5K-de-Ps4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Modyfikacja" id="dew-bu-oKt"/>
+                    <navigationItem key="navigationItem" title="Modyfikacja" id="dew-bu-oKt">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="cFE-Ae-ccX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlA-DZ-xq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
